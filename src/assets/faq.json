@@ -1,0 +1,162 @@
+[
+  {
+    "q": "Read this first - General warning about crypto-currency and Ripple:",
+    "a":
+        "Crypto-currency is a financial instrument. It requires the careful considered forethought of any financial transaction. Read carefully, read everything on the screen, learn about crypto-currency before you use it, learn how Ripple works and how it's different to other crypto-currencies before you use it, think before you leap, and always use small amounts to test before using large amounts, and always exercise general caution!"
+  },
+  {
+    "q": "I keep getting an error while sending, but I have enough in my account and I've left a 20 XRP reserve",
+    "a": "The public gateway Toast Wallet uses to access the Ripple network is provided by Ripple Labs and has become congested as of mid December 2017. We are working on alternative ways to provide access to the network. Ripple Labs is also working on upgrading this gateway for more capacity. If you really need to transfer out you should keep trying until you get a transaction through."
+  },
+  {
+    "q": "I bought on exchange XYZ and it hasn't shown up in my Toast Wallet yet, what's going on?",
+    "a": "If it isn't in your Toast Wallet then your exchange hasn't sent it. You can verify this by putting your address in <a target='_blank' href='https://ripple.com/build/ripple-info-tool/'>RPC Tool</a> — if it says account not found then your address hasn't been activated yet because your exchange hasn't sent anything yet (even if they claim they have!) Talk to them."
+  },
+  {
+    "q": "iPhone/iPad version keeps freezing!",
+    "a": "Update to iOS 11"
+  },
+  {
+    "q": "I read everything and something still doesn't work!",
+    "a": "Make sure you have the latest version. (Take a backup from the settings menu before you update.)"
+  },
+  {
+    "q": "I created a new address in Toast Wallet but it says not activated?",
+    "a": "You need to send at least 20 XRP to the new address to activate it on the Ripple network."
+  },
+  {
+    "q": "What are the fees for using Toast Wallet?",
+    "a": "Toast Wallet is free to use and always will be."
+  },
+  {
+    "q": "How do you make money then?",
+    "a": "We consider Toast Wallet to be an investment in our good name and brand. We intend to provide XRP related services from toastwallet.com in the future."
+  },
+  {
+    "q": "How do I know Toast Wallet is safe?",
+    "a": "Toast Wallet is open source, you can view the full code on <a target='_blank' href='https://github.com/ToastWallet/core'>GitHub</a>"
+  },
+  {
+    "q": "That's the code, or so you claim, but how do I know what is actually running on my phone/device?",
+    "a": "Our phone binaries are built directly from the GitHub repository using Adobe Phonegap's cloud build service, the output of which is <a target='_blank' href='https://build.phonegap.com/apps/2733163/share'>here</a>. Our PC binaries are built from the browser version of Toast Wallet using electron-builder. We welcome any third party to decompile/disassemble and inspect any of our binaries."
+  },
+  {
+    "q": "Do you send my Ripple secrets/accounts/wallet details to your servers?",
+    "a": "No data is sent to our servers from Toast Wallet, ever. The only connection to the outside world that Toast Wallet makes is directly to the Ripple network."
+  },
+  {
+    "q": "If I lose my passphrase do I lose my wallet?",
+    "a": "Provided you wrote down your recovery phrase you should be able to get it back."
+  },
+  {
+    "q": "If I lose my phone do I lose my wallet?",
+    "a": "Provided you made a backup from the settings menu <u>after generating your addresses</u> you'll be able to restore your backup onto another device."
+  },
+  {
+    "q": "Provided you made a backup from the settings menu after generating your addresses you'll be able to restore your backup onto another device.",
+    "a": "They are stored using <a target='_blank' href='https://pouchdb.com'>PouchDB</a>. Specifically the secrets are heavily encrypted ( <a target='_blank' href='https://toastwallet.com/cryptodiagram.html'>diagram</a> ) and then stored on your device. Your passphrase is used to generate a cryptographic key for storing your secrets. The PouchDB instance is never synced with any external server."
+  },
+  {
+    "q":
+        "There are only 100000 possible PIN combinations, won't two people eventually have the same PIN and be able to access each other's XRP?",
+    "a": "First, the PIN is not used to encrypt your secrets, it is just a privacy guard on the front of the app to stop your friends (whom presumably borrow your phone occasionally) from checking out how much XRP you have. Second, each time a passphrase is set on a Toast Wallet instance it is randomly salted, so even two identical passphrases on two different devices will produce two different keys. Finally Toast Wallet does not deterministically generate Ripple secrets, so no this could never happen."
+  },
+  {
+    "q":
+        "I sent some XRP to a Toast Wallet account and now I can't get the last 20XRP out of Toast Wallet, is this a fee you charge?",
+    "a": "We do not charge any fees. Toast Wallet is completely free to use and always will be. The 20 XRP reserve is a feature of the Ripple network. One day Ripple validators will lower the reserve requirement and free up these funds but for now they are locked."
+  },
+  {
+    "q":
+        "I'm trying to send to an address/exchange but it keeps telling me I have insufficient funds",
+    "a": "You need to leave a 20 XRP reserve in your Toast Wallet account. This is a Ripple network enforced reserve. You also should check that the address you're sending to starts with a lower case 'r' and is 33-34 alpha-numeric characters with no other characters in it such as ? & = . etc."
+  },
+  {
+    "q": "Can I backup my Toast Wallet?",
+    "a": "Yes use the settings menu."
+  },
+  {
+    "q": "Can I import a backup from a different wallet into Toast Wallet?",
+    "a": "Yes, if you can obtain the Ripple secret from the other wallet you can import it into Toast Wallet using the Add Existing Account feature under + Add Account."
+  },
+  {
+    "q": "Can I export a backup from Toast Wallet into a different wallet?",
+    "a": "Yes, click the account you wish to export then click Secret. Enter your passphrase and copy the Ripple secret for that account. Almost every Ripple wallet in existence allows you to import a Ripple secret."
+  },
+  {
+    "q": "I've lost my passphrase. How do I recover my wallet using my recovery phrase?",
+    "a": "Go to change passphrase in the settings menu. Enter your recovery phrase where it says 'current passphrase' then reset your passphrase as normal. If this doesn't work make sure you've updated to the latest version of Toast Wallet."
+  },
+  {
+    "q": "I've forgotten my PIN and my passphrase",
+    "a": "Tap the recovery icon at the top right of the PIN entry. Use your recovery phrase to reset your PIN. Then perform the steps in the question above to recover your passphrase."
+  },
+  {
+    "q": "I've forgotten my PIN and my passphrase and I didn't write down my recovery phrase.",
+    "a": "You're out of luck. Should have written down your recovery phrase."
+  },
+  {
+    "q": "I imported a backup but an account is missing",
+    "a": "Toast Wallet backups are data backups. You only backup what exists at the time you create the backup."
+  },
+  {
+    "q": "I sent XRP to an address that isn't in my wallet how do I get it back?",
+    "a": "Most likely you can't. Make sure you click/tap IMPORT ADDRESS on the generated address screen to actually add a new address to your wallet. If your account is not listed on the home screen of your Toast Wallet IT HAS NOT BEEN IMPORTED. Go back and do it properly!"
+  },
+  {
+    "q": "But who owns the (randomly generated) address I sent to if I don't?",
+    "a": "Most likely no one owns it. There are approximately 1.1 x 10^77 possible Ripple addresses. That is a 1 with 77 zeros after it. When you generate an address you pick a point at random in this address space. If you do not import the address or save the private key (secret) you will never be able to access it."
+  },
+  {
+    "q": "I sent a large amount of XRP to my Toast Wallet and something went wrong how do I get my money back?",
+    "a": "I sent a large amount of XRP to my Toast Wallet and something went wrong how do I get my money back?"
+  },
+  {
+    "q": "I sent XRP to my exchange but forgot to add the destination tag! What do I do?",
+    "a": "First locate the transaction by entering the Ripple address you sent from here: <a target='_blank' href='https://ripple.com/build/ripple-info-tool/'>RPC Tool</a>. Next find the transaction in question. Expand the transaction details and copy the transaction hash at the bottom. Contact your exchange, provide the transaction hash and explained what has happened. They will most likely initiate a refund back to your Toast Wallet address. DO NOT DELETE THE ADDRESS. DO NOT UNINSTALL THE APP."
+  },
+  {
+    "q": "I deleted the Toast Wallet app from my device but I still have the recovery phrase, how do I get my accounts back?",
+    "a": "You need to have made a backup before you deleted the app, using the settings menu option. Toast Wallet does NOT deterministically generate addresses from the recovery phrase. Some other wallets may operate this way but Toast Wallet does not. For absolute clarity: in order to recover a Toast Wallet backup you need: the backup code and either your passphrase OR your recovery code for that wallet."
+  },
+  {
+    "q": "I'm having trouble sending XRP out of the wallet especially on iOS",
+    "a": "Update to the latest version of Toast Wallet."
+  },
+  {
+    "q": "I'm trying to restore a backup onto another device through the existing backup button on the license agreement screen but the app hangs or takes a long time loading.",
+    "a": "A few users have had this experience and we are still debugging it. In the meantime you can setup a new wallet on the device (no need to write down the recovery phrase in this case) and then from the settings menu tap 'restore backup' and restore your backup from here instead."
+  },
+  {
+    "q": "I have a jailbroken iPhone or iPad and I opened Toast Wallet and my XRP is gone!",
+    "a": "We have had reports from jailbroken users that Toast Wallet does not behave normally on their devices. We do not recommend you use Toast Wallet on a jailbroken Apple device. For clarity: if you have Cydia on your phone, your phone is regarded as being jailbroken."
+  },
+  {
+    "q": "My exchange is asking me for a destination tag what do I put?",
+    "a": "If you are transfering to your own wallet address you can use destination tag 0"
+  },
+  {
+    "q": "The USD balance is a bit off in my wallet",
+    "a": "Toast uses Bitstamp's USD exchange rate for its live balance. If it's different to your favourite exchange it's because not all exchanges have the same rate at all times."
+  },
+  {
+    "q": "I'd like to have Toast run on two devices, can I sync my accounts?",
+    "a": "Yes simply generate a backup code from your current device (settings -> backup) then restore the backup on your new device by selecting the existing wallet option from the license screen and pasting the backup code into the next screen."
+  },
+  {
+    "q": "I'm trying to use my Recovery Phrase to change my passphrase but it's not working",
+    "a": "Your recovery phrase is six words long, all lower case no spaces at the start or end, exactly one space between each word. If it's not working its because you have extra whitespace."
+  },
+  {
+    "q": "I'm trying to send a tiny amount of XRP to a new address and it keeps failing",
+    "a": "You need to send at least 20 XRP to a new address to activate it. Anything less will bounce."
+  },
+  {
+    "q": "I printed my backup code and then scanned it back in or typed it in by hand and now it doesn't work",
+    "a": "Use the tool we've put together here to help you get your backup code working: <a target='_blank' href='https://toastwallet.com/backupcheck/'>Backup Checker</a>."
+  },
+  {
+    "q": "I'd like to make a paper wallet for a friend, can I do that with Toast Wallet?",
+    "a": "Yes you can. A paper wallet is just a Ripple key-pair: an address and a Ripple secret. Create a new address by tapping + Add Account then Generate New Address. Import the address into your Toast Wallet. Ignore the backup prompt. Now find the new address on your home screen, tap it, then tap Secret. Enter the passphrase to reveal the Ripple secret. Write this and the address down on paper to give to your friend. When you have written them down you can delete the address from your Toast Wallet using the Delete button. This is now a paper wallet."
+  }
+]

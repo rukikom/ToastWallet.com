@@ -1,0 +1,22 @@
+server {
+    root /var/www;
+    index index.html index.htm;
+
+    #server_name localhost;
+    listen 80;
+
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+        expires 1d;
+    }
+
+    location /browser {
+    }
+
+    location / {
+        try_files $uri $uri/ @root;
+    }
+
+    location @root {
+        rewrite .* / redirect;
+    }
+}

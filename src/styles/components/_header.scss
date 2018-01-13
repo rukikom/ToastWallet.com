@@ -1,0 +1,14 @@
+.navbar {
+  background: $dark;
+  a {
+    color: $light;
+    transition: all 0.3s ease-in;
+    &.active {
+      color: white;
+      background: black;
+    }
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+}

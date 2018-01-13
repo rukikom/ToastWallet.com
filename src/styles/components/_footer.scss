@@ -1,0 +1,31 @@
+a {
+  color: $light;
+  &:hover {
+    color: white;
+  }
+  &:focus {
+    color: $light;
+  }
+}
+
+.icon-img {
+  float: left;
+  vertical-align: middle;
+  margin: 0.4rem 0 0 0;
+}
+
+.footer-link {
+  margin: 0 1rem 0 1rem;
+}
+
+.footer-container {
+  padding: 3rem 0 3rem 0;
+}
+
+.copyright-container {
+  padding: 0 0 1rem 0;
+}
+
+.about-text {
+  padding-top: 1rem;
+}
